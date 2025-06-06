@@ -1,0 +1,14 @@
+﻿@model StayBooker.WebUI.Models.Role.AddRoleViewModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Name</label>
+    <input type="text" asp-for="RoleName" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Add</button>
+</form>
+
+

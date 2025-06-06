@@ -1,0 +1,78 @@
+﻿@model CreateContactDto
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">Contact Us</h6>
+            <h1 class="mb-5"><span class="text-primary text-uppercase">Contact</span> For Any Query</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-12">
+                <div class="row gy-4">
+                    <div class="col-md-4">
+                        <h6 class="section-title text-start text-primary text-uppercase">Booking</h6>
+                        <p><i class="fa fa-envelope-open text-primary me-2"></i>book@example.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="section-title text-start text-primary text-uppercase">General</h6>
+                        <p><i class="fa fa-envelope-open text-primary me-2"></i>info@example.com</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h6 class="section-title text-start text-primary text-uppercase">Technical</h6>
+                        <p><i class="fa fa-envelope-open text-primary me-2"></i>tech@example.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6012.853596407878!2d28.988473841255583!3d41.1033690714566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab68279d16fe3%3A0x5f125583ee2cf022!2sAli%20Sami%20Yen%20Spor%20Kompleksi%20RAMS%20Park!5e0!3m2!1str!2sde!4v1748645536066!5m2!1str!2sde" frameborder="0" style="min-height: 350px; border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+            </div>
+
+            <div class="col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.2s">
+                    <form method="post" asp-action="_Contact" asp-controller="Contact">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" asp-for="ContactName" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" asp-for="ContactMail" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" asp-for="ContactSubject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    @Html.DropDownListFor(m => m.MessageCategoryId, (List<SelectListItem>)ViewBag.CategoryValues, new { @class = "form-control" })
+                                    <label for="subject">Message Category</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" asp-for="ContactMessage" style="height: 150px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

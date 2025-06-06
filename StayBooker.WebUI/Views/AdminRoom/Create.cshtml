@@ -1,0 +1,49 @@
+﻿@model CreateRoomDto
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Title</label>
+    <input type="text" asp-for="RoomTitle" class="form-control" />
+    <span asp-validation-for="RoomTitle" class="text-danger"></span>
+    <br />
+    <label>Icon</label>
+    <input type="text" asp-for="RoomNumber" class="form-control" />
+    <span asp-validation-for="RoomNumber" class="text-danger"></span>
+    <br />
+    <label>Price</label>
+    <input type="number" asp-for="RoomPrice" class="form-control" />
+    <span asp-validation-for="RoomPrice" class="text-danger"></span>
+    <label>Description</label>
+    <br />
+    <label>Bads</label>
+    <input type="text" asp-for="RoomBadCount" class="form-control" />
+    <span asp-validation-for="RoomBadCount" class="text-danger"></span>
+    <label>Description</label>
+    <br />
+    <label>Baths</label>
+    <input type="text" asp-for="RoomBathCount" class="form-control" />
+    <span asp-validation-for="RoomBathCount" class="text-danger"></span>
+    <label>Description</label>
+    <br />
+    <label>Wifi</label>
+    <input type="text" asp-for="RoomWifi" class="form-control" />
+    <span asp-validation-for="RoomWifi" class="text-danger"></span>
+    <label>Description</label>
+    <br />
+    <label>Image</label>
+    <input type="text" asp-for="RoomCoverImage" class="form-control" />
+    <span asp-validation-for="RoomCoverImage" class="text-danger"></span>
+    <label>Description</label>
+    <br />
+    <textarea type="text" asp-for="RoomDescription" class="form-control"></textarea>
+    <span asp-validation-for="RoomDescription" class="text-danger"></span>
+    <br />
+    <button class="btn btn-primary">Add</button>
+</form>
+
+
+

@@ -1,0 +1,17 @@
+﻿@model GetServiceDto
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="ServiceId" />
+    <label>Title</label>
+    <input type="text" asp-for="ServiceTitle" class="form-control" />
+    <br />
+    <label>Icon</label>
+    <input type="text" asp-for="ServiceIcon" class="form-control" />
+    <br />
+    <label>Description</label>
+    <textarea type="text" asp-for="ServiceDescription" class="form-control"></textarea>
+</form>

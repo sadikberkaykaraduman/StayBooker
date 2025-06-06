@@ -1,0 +1,48 @@
+﻿@model CreateBookingDto
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Name</label>
+    <input type="text" asp-for="BookingName" class="form-control" />
+    <br />
+    <label>Mail</label>
+    <input type="text" asp-for="BookingMail" class="form-control" />
+    <br />
+    <label>Check In</label>
+    <input type="date" asp-for="BookingCheckin" class="form-control" />
+    <br />
+    <label>Check Out</label>
+    <input type="date" asp-for="BookingCheckOut" class="form-control" />
+    <br />
+    <label>Adults</label>
+    <input type="number" asp-for="BookingAdultCount" class="form-control" />
+    <br />
+    <label>Childeren</label>
+    <input type="number" asp-for="BookingChildCount" class="form-control" />
+    <br />
+    <label>Room</label>
+    <input type="text" asp-for="BookingRoomCount" class="form-control" />
+    <br />
+    <label>Status</label>
+    <input type="text" asp-for="BookingStatus" class="form-control" />
+    <br />
+    <label>City</label>
+    <input type="text" asp-for="BookingCity" class="form-control" />
+    <br />
+    <label>Country</label>
+    <input type="text" asp-for="BookingCountry" class="form-control" />
+    <br />
+    <label>Special Request</label>
+    <textarea type="text" asp-for="BookingSpecialRequest" class="form-control"></textarea>
+    <br />
+    <label>Description</label>
+    <textarea type="text" asp-for="BookingDescription" class="form-control"></textarea>
+    <br />
+    <button class="btn btn-primary">Add</button>
+</form>
+
+

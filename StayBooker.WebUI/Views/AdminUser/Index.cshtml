@@ -1,0 +1,32 @@
+﻿@model List<ResultAppUserListDto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="col-lg-12">
+    <div class="active-member">
+        <div class="table-responsive">
+            <table class="table table-xs mb-0">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name @item.Surname</td>
+                            <td>@item.City</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br />
+<a href="/AdminRegister/Index/" class="btn btn-primary">New User Registration</a>
+

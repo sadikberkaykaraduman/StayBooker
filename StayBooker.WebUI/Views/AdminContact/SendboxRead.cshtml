@@ -1,0 +1,38 @@
+﻿@model GetSendMessageDto
+
+@{
+    ViewData["Title"] = "SendboxRead";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="email-left-box">
+    @await Html.PartialAsync("SidebarContactPartial")
+
+    @await Html.PartialAsync("SidebarContactCategoryPartial")
+</div>
+
+<div class="email-right-box">
+
+    @await Html.PartialAsync("ToolBoxSendMessagePartial")
+
+    <div class="read-content">
+        <div class="media pt-5">
+            <div class="media-body">
+                <h5 class="m-b-3">@Model.ReceiverName</h5>
+                <p class="m-b-2">@Model.Date.ToString("dd/MMM/yyyy")</p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="media mb-4 mt-1">
+            <div class="media-body">
+                <span class="float-right">@Model.Date.ToString("HH/mm")</span>
+                <h4 class="m-0 text-primary">@Model.Title</h4><small class="text-muted">To:@Model.ReceiverMail</small>
+            </div>
+        </div>
+        <p>
+            @Model.Content
+        </p>
+    </div>
+</div>
+

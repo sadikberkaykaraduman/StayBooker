@@ -1,0 +1,37 @@
+﻿@model List<ResultBookingDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Mail</th>
+        <th>Check In</th>
+        <th>Check Out</th>
+        <th>Update</th>
+        <th>Details</th>
+        <th>Status</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.BookingId</th>
+            <td>@item.BookingName</td>
+            <td>@item.BookingMail</td>
+            <td>@item.BookingCheckin.ToString("dd/MM/yyyy")</td>
+            <td>@item.BookingCheckOut.ToString("dd/MM/yyyy")</td>
+            <td><a href="/AdminBooking/Delete/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-danger">Delete</a></td>
+            <td><a href="/AdminBooking/Update/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-success">Update</a></td>
+            <td><a href="/AdminBooking/Details/@item.BookingId" class="btn mb-1 btn-rounded btn-outline-dark">Details</a></td>
+        </tr>
+    }
+</table>
+<a href="/AdminBooking/Create/" class="btn mb-1 btn-rounded btn-outline-info">New Rezervation</a>
+
+
+

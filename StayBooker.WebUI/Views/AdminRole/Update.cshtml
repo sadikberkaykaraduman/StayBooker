@@ -1,0 +1,14 @@
+﻿@model StayBooker.WebUI.Models.Role.UpdateRoleViewModel
+@{
+    ViewData["Title"] = "Update";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Id" class="form-control" />
+    <label>Name</label>
+    <input type="text" asp-for="RoleName" class="form-control" />
+    <br />
+    <button class="btn btn-primary">Update</button>
+</form>
+

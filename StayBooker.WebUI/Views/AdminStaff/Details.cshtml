@@ -1,0 +1,24 @@
+﻿@model GetStaffDto
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <label>Name</label>
+    <input type="text" value="@Model.StaffName" class="form-control" />
+    <br />
+    <label>Title</label>
+    <input type="text" value="@Model.StaffTitle" class="form-control" />
+    <br />
+    <label>Social Media 1</label>
+    <input type="text" value="@Model.StaffSocialMedia1" class="form-control" />
+    <br />
+    <label>Social Media 2</label>
+    <input type="text" value="@Model.StaffSocialMedia2" class="form-control" />
+    <br />
+    <label>Social Media 3</label>
+    <input type="text" value="@Model.StaffSocialMedia3" class="form-control" />
+    <br />
+</form>
+

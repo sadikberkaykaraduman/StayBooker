@@ -1,0 +1,41 @@
+﻿@model List<ResultBookingDto>
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="active-member">
+                    <div class="table-responsive">
+                        <table class="table table-xs mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Chech In</th>
+                                    <th>Chenck Out</th>
+                                    <th>Room</th>
+                                    <th>Adults</th>
+                                    <th>Childs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.BookingName</td>
+                                        <td>@item.BookingCheckin</td>
+                                        <td>@item.BookingCheckOut</td>
+                                        <td>@item.BookingRoomCount</td>
+                                        <td>@item.BookingAdultCount</td>
+                                        <td>@item.BookingChildCount</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

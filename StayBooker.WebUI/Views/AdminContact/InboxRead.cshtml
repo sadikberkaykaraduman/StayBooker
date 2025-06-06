@@ -1,0 +1,38 @@
+﻿@model GetContactDto
+
+@{
+    ViewData["Title"] = "InboxRead";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+
+<div class="email-left-box">
+    @await Html.PartialAsync("SidebarContactPartial")
+
+    @await Html.PartialAsync("SidebarContactCategoryPartial")
+</div>
+
+<div class="email-right-box">
+
+    @await Html.PartialAsync("ToolBoxSendMessagePartial")
+    
+    <div class="read-content">
+        <div class="media pt-5">
+            <div class="media-body">
+                <h5 class="m-b-3">@Model.ContactName</h5>
+                <p class="m-b-2">@Model.ContactDate.ToString("dd/MMM/yyyy")</p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="media mb-4 mt-1">
+            <div class="media-body">
+                <span class="float-right">@Model.ContactDate.ToString("HH/mm")</span>
+                <h4 class="m-0 text-primary">@Model.ContactSubject</h4><small class="text-muted">To:Me,@Model.ContactMail</small>
+            </div>
+        </div>
+        <p>
+            @Model.ContactMessage
+        </p>
+    </div>
+</div>

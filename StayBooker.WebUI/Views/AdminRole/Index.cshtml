@@ -1,0 +1,25 @@
+﻿@model List<StayBooker.EntityLayer.Conrete.AppRole>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Delete</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Id</th>
+            <td>@item.Name</td>
+            <td><a href="/AdminRole/Delete/@item.Id" class="btn mb-1 btn-rounded btn-outline-danger">Delete</a></td>
+            <td><a href="/AdminRole/Update/@item.Id" class="btn mb-1 btn-rounded btn-outline-success">Update</a></td>
+        </tr>
+    }
+</table>
+<a href="/AdminRole/Create/" class="btn mb-1 btn-rounded btn-outline-info">New Role</a>
+

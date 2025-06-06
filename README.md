@@ -2,8 +2,6 @@
 
 Welcome to **StayBooker**! 🏨 This is a real-world hotel booking project built with **ASP.NET Core 5.0 API** and consumed via **MVC**. It’s designed to help developers understand how to build and consume Web APIs with layered architecture, modern authentication, and enterprise-ready practices.
 
-> 🎓 This project is part of the [Udemy course](https://www.udemy.com/course/aspnet-core-api-rapid-api-ve-api-consume/) where we explore over 200 lessons across 20+ hours!
-
 ---
 
 ## 📚 Course Overview
